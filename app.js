@@ -40,6 +40,11 @@ App({
         icon: "/imgs/tab/tab_home.png",
         selectedIcon: "/imgs/tab/tab_home_selected.png",
         title: 'first',
+      }, 
+      {
+        icon: "/imgs/tab/tab_guest.png",
+        selectedIcon: "/imgs/tab/tab_guest_selected.png",
+        title: 'guest',
       },
       {
         badge: 10,

@@ -14,7 +14,7 @@ Page({
     pulldownNotif: false,                // 下拉通知
     scroll_top: 0,                       // 滚动距离
     switchCustomTabEvent: 'switchCustomTabEvent', // 在子页面触发的切换tabbar事件
-    windowHeight: '100vh',    
+    windowHeight: '100vh',
   },
 
   /**
@@ -131,6 +131,13 @@ Page({
     var tabItem = res.detail;
     var dataForTabbar = this.data.dataForTabbar;
     var idx = this.get_tabar_idx_from_name(dataForTabbar, tabItem.title);
+    if (tabItem.title.indexOf("guest") != -1) { // 点击“guest”时，特殊处理
+      wx.navigateTo({
+        url: '/pages/three/index',
+      });
+      return;
+    }
+
     if (tabItem.title.indexOf(this.data.selectedTabbarKey) != -1) { // 点击已经选中的tab，不做处理
       return;
     }
