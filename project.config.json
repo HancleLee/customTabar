@@ -9,7 +9,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.9.94",
-	"appid": "wx86009f2432d09b67",
+	"appid": "touristappid",
 	"projectname": "tabbarDemo",
 	"isGameTourist": false,
 	"condition": {
