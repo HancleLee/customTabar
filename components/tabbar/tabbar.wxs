@@ -1,0 +1,13 @@
+
+var tabbar_item_width = function (tabbar_items_num) {
+  if (tabbar_items_num > 0) {
+    var width = 750 / tabbar_items_num;
+    return width + 'rpx';
+  }
+  return "";
+}
+
+
+module.exports = {
+  tabbar_item_width: tabbar_item_width,
+};

@@ -1,0 +1,90 @@
+/**
+  * 带上 ha-前缀 是为了避免冲突
+*/
+
+.ha-tab-bar {
+  flex: 1;
+  justify-content: space-around;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: #f7f7fa;
+  border-top: 1px solid #d2d2d2;
+  /* 定义在底部 */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 110rpx;
+  z-index: 1000;
+}
+
+.ha-tab-item {
+  display: inline-block;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 16rpx;
+  padding-bottom: 2rpx;
+  vertical-align: center;
+}
+
+.ha-tab-content {
+  display: inline-block;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.ha-tab-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+image {
+  width: 48rpx;
+  height: 48rpx;
+  /* background-color: lightcyan; */
+}
+
+.ha-tab-title {
+  display: flex;
+  font-size: 26rpx;
+  line-height: 34rpx;
+  text-align: center;
+  justify-content: center;
+}
+
+.ha-badge-container {
+  width: 80rpx;
+  height: 50rpx;
+  position: absolute;
+  /* background-color: lightblue; */
+}
+
+.ha-tab-bubble {
+  background-color: #e64340;
+  text-align: center;
+  justify-content: flex-start;
+  align-content: center;
+  position: absolute;
+  top: -14rpx;
+  right: -6rpx;
+  width: 32rpx;
+  height: 32rpx;
+  line-height: 26rpx;
+  border-radius: 16rpx;
+}
+
+.ha-tab-count {
+  color: white;
+  font-size: 20rpx;
+}
+
+.ha-tab-title-selected {
+  color: #3782f1;
+}

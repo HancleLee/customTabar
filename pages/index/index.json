@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "tabbar": "../../components/tabbar/tabbar",
+    "FirstPage": "../first/index",
+    "SecondPage": "../second/index"
+  },
+  "enablePullDownRefresh": true
+}

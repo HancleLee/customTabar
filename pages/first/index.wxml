@@ -1,0 +1,5 @@
+<!--pages/first/index.wxml-->
+<view class="container" hidden='{{onshow == true ? false : true}}'>
+  <view>first</view>
+  <button bindtap='tapBtn'>跳转second page</button>
+</view>

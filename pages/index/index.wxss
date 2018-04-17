@@ -1,0 +1,7 @@
+/**index.wxss**/
+.main-container {
+  width: 100%;
+  border-bottom: 110rpx solid #eeeef4;
+  /* background-color: lightblue; */
+}
+

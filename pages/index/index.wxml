@@ -1,0 +1,16 @@
+<!--index.wxml-->
+
+<view class='main-container'>
+  <scroll-view scroll-y='true' scroll-top='2' upper-threshold='0' lower-threshold='50' scroll-top='{{scroll_top}}' enable-back-to-top='true' style='height: {{windowHeight}}' bindscrolltolower='scrolllower' bindscrolltoupper='scrollupper'>
+
+    <!-- FirstPage  -->
+    <FirstPage onshow='{{selectedTabbarKey == "first" ? true : false}}' fromhome='true' onreachbottom='{{reachBottomNotif}}' onpulldown='{{selectedTabbarKey == "first" ? pulldownNotif : ""}}' bindswitchCustomTab='{{switchCustomTabEvent}}'></FirstPage>
+
+    <!--SecondPage  -->
+    <SecondPage onshow='{{selectedTabbarKey == "second" ? true : false}}' fromhome='true' onreachbottom='{{reachBottomNotif}}' onpulldown='{{selectedTabbarKey == "second" ? pulldownNotif : ""}}' bindswitchCustomTab='{{switchCustomTabEvent}}'></SecondPage>
+
+  </scroll-view>
+</view>
+
+
+<tabbar dataForTabbar='{{dataForTabbar}}' selectedTabbarIdx='{{selectedTabbarIdx}}' bindonTabbarItemTap='onTabbarItemTap'></tabbar>

@@ -1,0 +1,29 @@
+<!--pages/template/tabbarr/tabbarr.wxml-->
+<wxs src="./tabbar.wxs" module="tabbarTool" />
+
+<!-- 带上 ha-前缀：避免样式冲突 -->
+<!-- 默认在底部 -->
+<view class="ha-tab-bar">
+  <view class="ha-tab-item" style='width: {{tabbarTool.tabbar_item_width(dataForTabbar.length)}}' wx:for="{{ dataForTabbar }}" wx:for-item="tabItem" wx:for-index="index" wx:key="{{tabItem.sTitle}}">
+    <template is="ha-tab-item" data="{{ tabItem: tabItem, selectedTabbarIdx: selectedTabbarIdx, idx: index }}"></template>
+  </view>
+</view>
+
+<template name="ha-tab-item">
+  <view class="ha-tab-content" bindtap="onTabbarItemTap" data-tabitem="{{ tabItem }}" data-idx='{{ idx }}'>
+    <view class="ha-tab-icon">
+      <!-- icon -->
+      <image src="{{ idx ==selectedTabbarIdx ? tabItem.selectedIcon : tabItem.icon }}"></image>
+      <!-- 右上角 红色数字 -->
+      <view class='ha-badge-container'>
+        <view class="ha-tab-bubble" wx:if="{{ tabItem.badge > 0}}">
+          <text class="ha-tab-count">{{ tabItem.badge < 100? tabItem.badge: 99 }}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 标题 -->
+    <view class='ha-tab-title {{idx == selectedTabbarIdx ? "ha-tab-title-selected" : ""}}'>
+      <text>{{ tabItem.title }}</text>
+    </view>
+  </view>
+</template>

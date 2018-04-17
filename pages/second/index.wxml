@@ -1,0 +1,4 @@
+<!--pages/second/index.wxml-->
+<view class="container" hidden='{{onshow == true ? false : true}}'>
+  <view>second</view>
+</view>
