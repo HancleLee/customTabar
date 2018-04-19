@@ -63,7 +63,7 @@ Component({
     },
 
     tapBtn: function (res) {
-      this.triggerEvent("switchCustomTab", getApp().globalData.tabbar[1]);
+      this.triggerEvent("switchCustomTab", getApp().globalData.tabbar[2]);
     },
   },
 

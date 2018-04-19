@@ -137,7 +137,6 @@ Page({
       });
       return;
     }
-
     if (tabItem.title.indexOf(this.data.selectedTabbarKey) != -1) { // 点击已经选中的tab，不做处理
       return;
     }
