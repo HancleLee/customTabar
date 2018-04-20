@@ -12,5 +12,5 @@
   </scroll-view>
 </view>
 
-
+<!--tabbar  -->
 <tabbar dataForTabbar='{{dataForTabbar}}' selectedTabbarIdx='{{selectedTabbarIdx}}' bindonTabbarItemTap='onTabbarItemTap'></tabbar>
