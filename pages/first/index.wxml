@@ -1,5 +1,7 @@
 <!--pages/first/index.wxml-->
 <view class="container" hidden='{{onshow == true ? false : true}}'>
-  <view>first</view>
-  <button bindtap='tapBtn'>跳转second page</button>
+  <view>
+    <button bindtap='tapBtn' class='jump-btn'>跳转到second page</button>
+    <button bindtap='tapBtn2'>切换tabbar</button>
+  </view>
 </view>

@@ -14,6 +14,8 @@ Page({
     pulldownNotif: false,                // 下拉通知
     scroll_top: 0,                       // 滚动距离
     switchCustomTabEvent: 'switchCustomTabEvent', // 在子页面触发的切换tabbar事件
+    reloadTabbar: 'reloadTabbar',         // 重载tabbar
+    check: false,
     windowHeight: '100vh',
   },
 
@@ -165,6 +167,43 @@ Page({
       this.onTabbarItemTap(res);
 
     } catch (e) { }
+  },
+
+  // 重载tabbar
+  reloadTabbar: function (res) {
+    console.log(res);
+    var tabbar = !this.data.check ? [{
+      icon: "/imgs/tab/tab_home.png",
+      selectedIcon: "/imgs/tab/tab_home_selected.png",
+      title: 'first',
+    },
+    {
+      badge: 10,
+      icon: "/imgs/tab/tab_content.png",
+      selectedIcon: "/imgs/tab/tab_content_selected.png",
+      title: 'second',
+    }] : [{
+      icon: "/imgs/tab/tab_home.png",
+      selectedIcon: "/imgs/tab/tab_home_selected.png",
+      title: 'first',
+    },
+    {
+      icon: "/imgs/tab/tab_guest.png",
+      selectedIcon: "/imgs/tab/tab_guest_selected.png",
+      title: 'guest',
+    },
+    {
+      badge: 10,
+      icon: "/imgs/tab/tab_content.png",
+      selectedIcon: "/imgs/tab/tab_content_selected.png",
+      title: 'second',
+    }
+      ];
+    this.setData({
+      check: !this.data.check,
+    })
+    getApp().globalData.tabbar = tabbar;
+    this.onLoad();
   },
 
   // 根据名称获取tabbar的选中idx

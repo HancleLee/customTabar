@@ -63,8 +63,13 @@ Component({
     },
 
     tapBtn: function (res) {
-      this.triggerEvent("switchCustomTab", getApp().globalData.tabbar[2]);
+      var secondpage = { badge: 10, icon: "/imgs/tab/tab_content.png", selectedIcon: "/imgs/tab/tab_content_selected.png", title: 'second', };
+      this.triggerEvent("switchCustomTab", secondpage);
     },
+
+    tapBtn2: function (res) {
+      this.triggerEvent("reloadTabbar");
+    }
   },
 
   // 组件生命周期函数，在组件实例进入页面节点树时执行，注意此时不能调用 setData
