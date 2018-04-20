@@ -6,4 +6,4 @@
 
 
 
-![image](https://github.com/HancleLee/customTabar/blob/master/images/tabar-demo.gif)
+![image](https://github.com/HancleLee/customTabar/blob/master/images/tabar.gif)
